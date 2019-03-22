@@ -72,4 +72,8 @@ class ImageDownloadManagerImplementation: ImageDownloadManager {
         guard url != nil else { return }
         fileDownloader.cancelDownloadForFile(at: url!)
     }
+    
+    func clearExpiredCacheIfNeeded() {
+        fileCacher.clearExpiredCacheIfNeeded()
+    }
 }

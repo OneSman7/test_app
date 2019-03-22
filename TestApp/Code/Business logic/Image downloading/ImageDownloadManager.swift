@@ -34,4 +34,7 @@ protocol ImageDownloadManager {
     ///
     /// - Parameter url: ссылка на изображение
     func cancelLoadImage(at url: URL?)
+    
+    /// Удалить устаревшие файлы, если такие имеются в кэше и текущий размер кэша превысил размер отведенного кэша
+    func clearExpiredCacheIfNeeded()
 }
